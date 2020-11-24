@@ -29,7 +29,7 @@ const account = {
    */
 
   createTransaction(amount, type) {
-    this.transactions.push({
+     this.transactions.push({
       id: this.transactions.length,
       amount,
       type,
@@ -107,12 +107,14 @@ console.log('balance: ', account.getBalance());
 
 console.log(account.withdraw(500));
 console.log(account.withdraw(3000));
+console.log(account.withdraw(1500));
 console.table(account.transactions);
 console.log('balance: ', account.getBalance());
 
 console.log(account.getTransactionDetails(0));
 console.log(account.getTransactionDetails(1));
 console.log(account.getTransactionDetails(2));
+console.log(account.getTransactionDetails(3));
 
 console.log(account.getTransactionTotal(Transaction.DEPOSIT));
 console.log(account.getTransactionTotal(Transaction.WITHDRAW));
